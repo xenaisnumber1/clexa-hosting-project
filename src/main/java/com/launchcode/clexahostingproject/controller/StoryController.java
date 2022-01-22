@@ -15,7 +15,7 @@ public class StoryController {
     @Autowired
     private StoryRepository sRepo;
 
-    @GetMapping("/showStories")
+    @GetMapping({"/showStories", "/", "/list"})
     public ModelAndView showStories(){
         ModelAndView mav = new ModelAndView("list-stories");
         List<Story> list = sRepo.findAll();
